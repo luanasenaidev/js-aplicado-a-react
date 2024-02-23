@@ -10,9 +10,15 @@
 
   <script>
 
+  // Função sintaxe tradicional
+  function nomeDaFuncao() {
+    exibirNaTela('Função de sintaxe tradicional');
+  }
 
-
-    //1ª Digitação (aqui) 
+  // Função anônima 
+  var outraFuncao = function() {
+    exibirNaTela('Outra forma de declarar função...');
+  }
 
 
 
@@ -26,11 +32,11 @@
     calcule a diferença entre eles e retorne o resultado
     para uma variável externa */
 
+  function exercicio(valor1,valor2) {
+    return valor1 - valor2;
+  }
 
-
-    //2ª Digitação (aqui) 
-
-
+  let resultado = exercicio(10,3);
 
     exibirNaTela(resultado);
 
@@ -45,7 +51,7 @@
 
     const ola = nome => exibirNaTela('Olá ' + nome);
 
-    ola('Ignacio');
+    ola('Luana');
 
     // Versão simplificada (Arrow function com retorno IMPLÍCITO)
     const metade = valor => valor / 2;
@@ -66,11 +72,12 @@
     - Monte uma arrow function que receba um nome de pessoa e a converta para letras maiúsculas.
     - Chame a função 3x (passando nomes diferentes) e exibindo no console e tela os resultados */
 
-    
+  let converterParaMaiusculas = nome => nome.toUpperCase();
 
-    //3ª Digitação (aqui) 
-
-
+  exibirNaTela(converterParaMaiusculas('Luana'));
+  exibirNaTela(converterParaMaiusculas('Kaue'));
+  exibirNaTela(converterParaMaiusculas('Laura'));
+  
 
     function exibirNaTela(texto) {
       // Exibe a mensagem no console do navegador

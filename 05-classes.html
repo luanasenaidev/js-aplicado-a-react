@@ -10,9 +10,23 @@
 
   <script>
 
+  class Pessoa {
+    // Propriedades
+    nome = 'sem nome';
+    genero = 'não informado';
+    idade;
 
-
-    //1ª Digitação (aqui) 
+  // Métodos
+  mostraGenero() {
+    exibirNaTela(this.genero);
+  }
+  mostraGenero() {
+    exibirNaTela(this.nome);
+  }
+  verificaIdade() {
+    return this.idade >=18 ? 'é maior' : 'é menor';
+  }
+  }
 
 
 
@@ -21,34 +35,36 @@
       // Propriedades
       matricula;
       curso;
-
-      // Métodos
-      mostraDados() {
-        exibirNaTela(this.matricula);
-        exibirNaTela(this.curso);
-
-        // Métodos da super classe
-        this.mostraNome();
-        this.mostraGenero();
-      }
     }
 
-    // Criando objetos/ instâncias
+   // Criando objetos/ instâncias
+    // 1° objeto
+    let umaPessoa = new Pessoa;
+    umaPessoa.nome = 'Checo Perez';
+    umaPessoa.genero = 'masculino';
+    umaPessoa.idade = 30;
 
+    exibirNaTela(umaPessoa);
 
+    let outraPessoa =  new Pessoa;
+    outraPessoa.nome = 'Maria';
+    outraPessoa.idade = 25;
 
-    //2ª Digitação (aqui) 
-
+    exibirNaTela(umaPessoa);
 
 
 
     // Objeto herdando recursos
+    let aluno = new Aluno;
+    aluno.nome = 'Vitória';
+    aluno.genero = 'feminino';
+    aluno.matricula = '123abc';
+    aluno.curso = 'JS para React';
+    aluno.idade = 25;
 
-
-
-
-     //3ª Digitação (aqui) 
-
+    exibirNaTela(aluno.nome);
+    exibirNaTela(aluno.idade);
+    exibirNaTela(aluno.verificaIdade());
 
 
 
@@ -65,16 +81,16 @@
     }
 
     // Usando string JSON 
-    // function exibirNaTela(objeto) {
-    //   // Converte o objeto para uma string JSON formatada
-    //   const jsonString = JSON.stringify(objeto, null, 2);
+    function exibirNaTela(objeto) {
+      // Converte o objeto para uma string JSON formatada
+      const jsonString = JSON.stringify(objeto, null, 2);
 
-    //   // Exibe a mensagem no console do navegador
-    //   console.log(jsonString);
+      // Exibe a mensagem no console do navegador
+      console.log(jsonString);
 
-    //   // Exibe a mensagem na tela da página
-    //   document.getElementById('output').innerHTML += '<pre>' + jsonString + '</pre><br>';
-    // }
+      // Exibe a mensagem na tela da página
+      document.getElementById('output').innerHTML += '<pre>' + jsonString + '</pre><br>';
+    }
 
   </script>
 </body>

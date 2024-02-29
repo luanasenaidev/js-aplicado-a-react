@@ -20,10 +20,12 @@
 
     // _________________________
     exibirNaTela('======================');
-
-
-
-    //1ª Digitação (aqui) 
+    const alunos = ['Maria' , 'Lúcia' , 'Kaio'];
+    const [maria, lucia, kaio] = alunos;
+    
+    exibirNaTela(maria);
+    exibirNaTela(lucia);
+    exibirNaTela(kaio);
 
 
 
@@ -40,14 +42,15 @@
     // _________________________
     exibirNaTela('======================');
     // Usando desestruturação com objetos
+  const {nome, cidade} = {nome: 'Fulano' , idade: 18, cidade: 'São Paulo'};
+  exibirNaTela(nome);
+  exibirNaTela(cidade);
 
-
-    
-
-     //2ª Digitação (aqui) 
-
-
-
+  const dados = {
+    nome: 'Guilherme',
+    curso: 'JavaScript',
+    nascimento: '31/10/1998'
+  };
 
     exibirNaTela('======================');
 
